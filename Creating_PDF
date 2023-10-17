@@ -1,0 +1,12 @@
+Sub Creating_PDF()
+
+'Create variables
+Dim saveLocation As String
+Dim ws As Worksheet
+Dim rng As Range
+
+
+
+
+
+End Sub
