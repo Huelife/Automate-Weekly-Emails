@@ -5,8 +5,12 @@ Dim saveLocation As String
 Dim ws As Worksheet
 Dim rng As Range
 
+'WS 1 info
+saveLocation = "C:\Users\Bob\Desktop\Logs\Sheet1 Logs.pdf"
+Set ws = Sheets("Sheet1")
+Set rng = ws.range("A1:N100")
 
-
-
+'WS 1 save as pdf
+rng.ExportAsFixedFormat Type:=TypePDF, Filename:=saveLocation
 
 End Sub
