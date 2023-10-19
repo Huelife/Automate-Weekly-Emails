@@ -1,0 +1,10 @@
+Sub PDF_to_Outlook()
+
+Dim EmailSubject As String
+Dim MeetingDate As String, PDFFile As String
+Dim Email_To As String, Email_CC As String
+Dim DisplayEmail As Boolean
+Dim OutlookAopp As Object, OutlookMail As Object
+MeetingDate = "10/20/2023"
+
+End Sub
