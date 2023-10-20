@@ -4,7 +4,23 @@ Dim EmailSubject As String
 Dim MeetingDate As String, PDFFile As String
 Dim Email_To As String, Email_CC As String
 Dim DisplayEmail As Boolean
-Dim OutlookAopp As Object, OutlookMail As Object
+Dim OutlookApp As Object, OutlookMail As Object
 MeetingDate = "10/20/2023"
+EmailSubject = "Progression Meeting: "
+
+'Create Outlook obj
+Set OutlookApp = CreatObject("Outlook.Application")
+Set OutlookMail = OutlookApp.CreateItem(0)
+
+'Display email
+With OutlookMail
+
+.Display
+.To = Email_To
+.CC = Email_CC
+.Subject = EmailSubject & MeetingDate
+.Attachments.Add PDFFile
+
+End With
 
 End Sub
