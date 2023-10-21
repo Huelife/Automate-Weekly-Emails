@@ -1,12 +1,21 @@
 Sub PDF_to_Outlook()
 
 Dim EmailSubject As String
-Dim MeetingDate As String, PDFFile As String
-Dim Email_To As String, Email_CC As String
+Dim MeetingDate As String, PdfFile1 As String, PdfFile2 As String
+Dim Email_To As String, Email_CC As String, Email_Body As String
+
 Dim DisplayEmail As Boolean
 Dim OutlookApp As Object, OutlookMail As Object
+
+EmailSubject = "Progress Meeting: "
 MeetingDate = "10/20/2023"
-EmailSubject = "Progression Meeting: "
+PdfFile1 = ""
+PdfFile1 = ""
+Email_To = ""
+Email_CC = ""
+Email_Body = ""
+
+DisplayEmail = True
 
 'Create Outlook obj
 Set OutlookApp = CreatObject("Outlook.Application")
