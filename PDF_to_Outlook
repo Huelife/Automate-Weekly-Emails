@@ -1,5 +1,6 @@
 Sub PDF_to_Outlook()
 
+'Create variables
 Dim EmailSubject As String
 Dim MeetingDate As String, PdfFile1 As String, PdfFile2 As String
 Dim Email_To As String, Email_CC As String, Email_Body As String
@@ -23,12 +24,13 @@ Set OutlookMail = OutlookApp.CreateItem(0)
 
 'Display email
 With OutlookMail
-
 .Display
 .To = Email_To
 .CC = Email_CC
 .Subject = EmailSubject & MeetingDate
-.Attachments.Add PDFFile
+.HTMLBody = Email_Body
+.Attachments.Add PdfFile1
+.Attachments.Add PdfFile2
 
 End With
 
