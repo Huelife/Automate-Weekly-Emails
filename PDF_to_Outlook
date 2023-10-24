@@ -10,11 +10,13 @@ Dim OutlookApp As Object, OutlookMail As Object
 
 EmailSubject = "Progress Meeting: "
 MeetingDate = "10/20/2023"
-PdfFile1 = ""
-PdfFile1 = ""
-Email_To = ""
-Email_CC = ""
-Email_Body = ""
+PdfFile1 = "C:\Users\To\File\Location\Logs1.pdf"
+PdfFile1 = "C:\Users\To\File\Location\Logs2.pdf"
+Email_To = "customer.email@gmail.com"
+Email_CC = "manager.email@gmail.com;" & "project.manager.email@gmail.com;"
+Email_Body = "<Body style=font-size:11pt;font-family:Calibri>" & 
+"Good Morning Customer.Name,"<br><br>" & "Please see attached for " & 
+MeetingDate & " Meeting: Log1 and Log2." & "</Body>"
 
 DisplayEmail = True
 
