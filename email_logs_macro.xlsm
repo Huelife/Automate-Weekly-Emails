@@ -1,1 +1,27 @@
+Sub email_logs_macro()
 
+'Create variables
+Dim saveLocation As String
+Dim ws As Worksheet
+Dim rng As Range
+
+Dim EmailSubject As String
+Dim MeetingDate As String, PdfFile1 As String, PdfFile2 As String
+Dim Email_To As String, Email_CC As String, Email_Body As String
+
+Dim DisplayEmail As Boolean
+Dim OutlookApp As Object, OutlookMail As Object
+
+EmailSubject = "Progress Meeting: "
+MeetingDate = "10/20/2023"
+PdfFile1 = "C:\Users\To\File\Location\Logs1.pdf"
+PdfFile1 = "C:\Users\To\File\Location\Logs2.pdf"
+Email_To = "customer.email@gmail.com"
+Email_CC = "manager.email@gmail.com;" & "project.manager.email@gmail.com;"
+Email_Body = "<Body style=font-size:11pt;font-family:Calibri>" & 
+"Good Morning Customer.Name,"<br><br>" & "Please see attached for " & 
+MeetingDate & " Meeting: Log1 and Log2." & "</Body>"
+
+DisplayEmail = True
+
+End Sub
