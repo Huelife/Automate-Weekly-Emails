@@ -11,7 +11,7 @@ Set ws = Sheets("Sheet1")
 Set rng = ws.range("A1:N100")
 
 'WS 1 save as pdf
-rng.ExportAsFixedFormat Type:=TypePDF, Filename:=saveLocation
+rng.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation
 
 'WS 2 info
 saveLocation = "C:\Users\Bob\Desktop\Logs\Sheet2 Logs.pdf"
@@ -19,6 +19,6 @@ Set ws = Sheets("Sheet2")
 Set rng = ws.range("A1:N200")
 
 'WS 2 save as pdf
-rng.ExportAsFixedFormat Type:=TypePDF, Filename:=saveLocation
+rng.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation
 
 End Sub
