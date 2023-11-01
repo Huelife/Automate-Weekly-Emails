@@ -11,6 +11,7 @@ xlApp.Visible = True
 
 'Open/close WB2, Executing Macro
 path2 = "C:\Users\To\File\Location\logs.xlsm"
+xlApp.Workbooks.Open(path2, 0, True)
 xlApp.Run "'" & path1 & "'!Macro1.Macro1"
 xlBook2.Close
 
