@@ -16,22 +16,6 @@ Dim OutlookApp As Object, OutlookMail As Object
 Set OutlookApp = CreatObject("Outlook.Application")
 Set OutlookMail = OutlookApp.CreateItem(0)
 
-'WS 1 info
-saveLocation = "C:\Users\To\File\Location\Logs1.pdf"
-Set ws = Sheets("Sheet1")
-Set rng = ws.range("A1:N100")
-
-'WS 1 save as pdf
-rng.ExportAsFixedFormat Type:=TypePDF, Filename:=saveLocation
-
-'WS 2 info
-saveLocation = "C:\Users\To\File\Location\Logs2.pdf"
-Set ws = Sheets("Sheet2")
-Set rng = ws.range("A1:N200")
-
-'WS 2 save as pdf
-rng.ExportAsFixedFormat Type:=TypePDF, Filename:=saveLocation
-
 'Email variables
 EmailSubject = "Progress Meeting: "
 MeetingDate = "10/20/2023"
@@ -44,6 +28,22 @@ Email_Body = "<Body style=font-size:11pt;font-family:Calibri>" &
 MeetingDate & " Meeting: Log1 and Log2." & "</Body>"
 
 DisplayEmail = True
+
+'WS 1 info
+saveLocation = "C:\Users\To\File\Location\Logs1.pdf"
+Set ws = Sheets("Sheet1")
+Set rng = ws.range("A1:N100")
+
+'WS 1 save as pdf
+rng.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation
+
+'WS 2 info
+saveLocation = "C:\Users\To\File\Location\Logs2.pdf"
+Set ws = Sheets("Sheet2")
+Set rng = ws.range("A1:N200")
+
+'WS 2 save as pdf
+rng.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation
 
 'Display email
 With OutlookMail
