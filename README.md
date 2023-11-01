@@ -13,5 +13,8 @@ Automating through Task Scheduler:
    D) Thursday (Check this one for sending reports out on Thursdays)<br>
 3) Action:<br>
    A) Start a program (Check this one)<br>
-   B) Add .bat file location<br>
-4) Finish<br>
+   B) Program/script:<br>
+      (email_logs.bat)<br>
+   C) Start in (optional):<br>
+      (C:\Users\to\.bat\file\location\)<br>
+5) Finish<br>
