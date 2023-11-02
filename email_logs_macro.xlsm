@@ -4,6 +4,8 @@ Sub email_logs_macro()
 Dim saveLocation As String
 Dim ws As Worksheet
 Dim rng As Range
+Dim RowNumber1 As String
+Dim RowNumber1 As String
 
 Dim EmailSubject As String
 Dim MeetingDate As String, PdfFile1 As String, PdfFile2 As String
@@ -11,6 +13,8 @@ Dim Email_To As String, Email_CC As String, Email_Body As String
 
 Dim DisplayEmail As Boolean
 Dim OutlookApp As Object, OutlookMail As Object
+
+RowNumber1 = Evaluate("=COUNTA(C:C)")
 
 'Create Outlook obj
 Set OutlookApp = CreatObject("Outlook.Application")
@@ -32,7 +36,7 @@ DisplayEmail = True
 'WS 1 info
 saveLocation = "C:\Users\To\File\Location\Logs1.pdf"
 Set ws = Sheets("Sheet1")
-Set rng = ws.range("A1:N100")
+Set rng = ws.range("A1:L1" & RowNumber1)
 
 'WS 1 save as pdf
 rng.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation
