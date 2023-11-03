@@ -35,7 +35,7 @@ MeetingDate & " Meeting: Log1 and Log2." & "</Body>"
 'WS 1 info
 saveLocation = "C:\Users\To\File\Location\Logs1.pdf"
 Set ws = Sheets("Sheet1")
-Set rng = ws.range("A1:L1" & RowNumber1)
+Set rng = ws.range("A1:L" & RowNumber1)
 
 'WS 1 save as pdf
 rng.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation
@@ -43,7 +43,8 @@ rng.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation
 'WS 2 info
 saveLocation = "C:\Users\To\File\Location\Logs2.pdf"
 Set ws = Sheets("Sheet2")
-Set rng = ws.range("A1:N200")
+RowNumber2 = Evaluate("=SUM(COUNTBLANK(F1:F50),COUNTA(F:F))")
+Set rng = ws.range("A1:N" & RowNumber2) 
 
 'WS 2 save as pdf
 rng.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation
