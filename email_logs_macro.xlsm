@@ -5,7 +5,7 @@ Dim saveLocation As String
 Dim ws As Worksheet
 Dim rng As Range
 Dim RowNumber1 As String
-Dim RowNumber1 As String
+Dim RowNumber2 As String
 
 Dim EmailSubject As String
 Dim MeetingDate As String, PdfFile1 As String, PdfFile2 As String
