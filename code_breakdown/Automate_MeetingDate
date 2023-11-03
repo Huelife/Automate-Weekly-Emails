@@ -1,0 +1,5 @@
+Sub Automate_MeetingDate ()
+
+Dim MeetingDate As String
+
+End Sub
