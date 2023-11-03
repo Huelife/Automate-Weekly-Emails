@@ -1,4 +1,3 @@
 @echo off
-%SystemRoot%\System32\cscript
-"email_logs.vbs"
+%SystemRoot%\System32\cscript "email_logs.vbs"
 & exit
