@@ -4,5 +4,6 @@ Dim RowNumber1 As String
 Dim RowNumber2 As String
 
 RowNumber1 = Evaluate("=COUNTA(C:C)")
+RowNumber2 = Evaluate("=SUM(COUNTBLANK(F1:F50),COUNTA(F:F))")
 
 End Sub
