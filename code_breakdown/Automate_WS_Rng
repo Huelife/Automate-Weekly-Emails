@@ -1,0 +1,6 @@
+Sub Automate_WS_Rng()
+
+Dim RowNumber1 As String
+Dim RowNumber2 As String
+
+End Sub
