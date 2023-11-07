@@ -12,7 +12,7 @@ Set xlBook1 = xlApp.Workbooks.Open(path1, 0 True)
 'Open/close WB2, Executing Macro
 path2 = "C:\Users\To\File\Location\logs.xlsm"
 Set xlBook2 = xlApp.Workbooks.Open(path2, 0, True)
-xlApp.Run "'" & path1 & "'!Macro1.Macro1"
+xlApp.Run "'" & path1 & "'!email_logs_macro.email_logs_macro"
 xlBook2.Close
 
 'Close WB1 and Excel
