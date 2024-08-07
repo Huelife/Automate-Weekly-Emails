@@ -17,7 +17,7 @@ Dim OutlookApp As Object, OutlookMail As Object
 RowNumber1 = Evaluate("=COUNTA(C:C)")
 
 'Create Outlook obj
-Set OutlookApp = CreatObject("Outlook.Application")
+Set OutlookApp = CreateObject("Outlook.Application")
 Set OutlookMail = OutlookApp.CreateItem(0)
 
 'Email variables
@@ -29,8 +29,7 @@ DisplayEmail = True
 Email_To = "customer.email@gmail.com"
 Email_CC = "manager.email@gmail.com;" & "project.manager.email@gmail.com;"
 Email_Body = "<Body style=font-size:11pt;font-family:Calibri>" & 
-"Good Morning Customer.Name,"<br><br>" & "Please see attached for " & 
-MeetingDate & " Meeting: Log1 and Log2." & "</Body>"
+"Good Morning Customer.Name,"<br><br>" & "Please see attached for " & MeetingDate & " Meeting: Log1 and Log2." & "</Body>"
 
 'WS 1 info
 saveLocation = "C:\Users\To\File\Location\Logs1.pdf"
